@@ -1,0 +1,2 @@
+# Shortcuts
+CtrlAltU opens terminal
