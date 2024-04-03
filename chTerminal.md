@@ -12,7 +12,8 @@ pwd gives current path
 
 ## create. and delete
 mkdir (name) makes a dir
-rmdir (name) removes a dir.
+rmdir (name) removes a dir. ONLY empty
+rm -rf (name) where -rf stands for "recursive folder" will delete a full folder and its contents.
 
 touch (name) makes any sort of changes to file(name), if there is no file(name) it will create it.
 
