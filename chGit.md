@@ -91,38 +91,38 @@ will also display the amt of edits per commit, in numbers of deletions and inser
 will display the actual changes within the files.
 
 ### Filtering
+ 
+**--after=** **--before=**  
+sets date (YYYY/MM/DD)  
+also works with relative refs ( _yesterday_, _3 days ago_)  
+can be used in conjunction to establish start and end of tracking  
 
-**--after=** **--before=**
-sets date (YYYY/MM/DD)
-also works with relative refs ( _yesterday_, _3 days ago_)
-can be used in conjunction to establish start and end of tracking
+**--author=**   
+filter by user  
+can be multiple users with \|  
+works with user-email as well  
+needn't be perfect match  
 
-**--author=** 
-filter by user
-can be multiple users with \|
-works with user-email as well
-needn't be perfect match
+**--grep=**  
+search by commit msg  
 
-**--grep=**
-search by commit msg
+**--merges** and **--no-merges**  
+as per cmd argument suggests  
 
-**--merges** and **--no-merges**
-as per cmd argument suggests
-
-**range**
-using **..** defines a range between two arguments to act as start and endpoint of tracking.
-Useful for branch history, ex:
+**range**  
+using **..** defines a range between two arguments to act as start and endpoint of tracking.  
+Useful for branch history, ex:  
 ```
 git log main..feature
 ```
-will display commit history of edits specific to the feature branch since creation off the main branch.
+will display commit history of edits specific to the feature branch since creation off the main branch.  
 feature..main instead will display commit hist of main branch since feature branch creation
 
 ### History of a file
 
-providing file path after -- will list commits containing the file at set path.
+providing file path after -- will list commits containing the file at set path.  
 
-**-S""** and **-G""**
+**-S""** and **-G""**  
 can track a string or expression respectively, ie searching for where "hello world" was included in all files of the tree, through the history, 
 ```
 git log -S"hello world"
@@ -134,22 +134,22 @@ will display commit history of any inclusion/deletion of the string.
 
 Gitflow is a tool that streamlines the project workflow.
 
-- git flow init
+- git flow init  
 alike git init, but includes settings specifics to git flow, definable on init
 Upon init, it'll ask for names of different branch types (feature, bugfix, etc) which can be used later to create clean branches, readable in the logs.
 
-- git flow [branchtype] start [NAME]
+- git flow [branchtype] start [NAME]  
 will create a branch of a set type under the registered name and move to it as working branch.
 
-- git flow [branchtype] finish [NAME]
+- git flow [branchtype] finish [NAME]  
 merges back into the main (develop) branch, deletes the [NAME] branch, and switches to develop.
 
-- git flow [branchtype] publish [NAME]
+- git flow [branchtype] publish [NAME]  
 sends the branch onto the remote server to be accessed by other collaborators
 
-- git flow [branchtype] pull origin [NAME]
+- git flow [branchtype] pull origin [NAME]  
 grabs a branch published by a collaborator to be on your local
 
-- git flow [branchtype] track [NAME]
+- git flow [branchtype] track [NAME]  
 tracks a branch on origin
 
