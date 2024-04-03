@@ -13,27 +13,33 @@
 ## Base commands
 - git init
 creates local git repo at current location
+___
 
 - git remote
 to set links between local and remote repos
 git remote add [name][link]
 git remote add upstream[link]
+___
 
 git remote -v
+___
 
 - git add
 select files for staging
+____
 
 - git pull (fromwho)(towhichbranch)
 retrieve state of source to keep up to date AND **merges it to the workspace**
 ##### options:
-    - **merge** : combines both the origin and the local histories, keeping both fully BUT will create a merge commit which muddies up the LOGS
+- **merge** : combines both the origin and the local histories, keeping both fully BUT will create a merge commit which muddies up the LOGS
 
-    - **rebase** : MOVES the child branch to now start where the modified main branch ends, all commit history of main now incorporated into CHILDBRANCH as it gets rewritten. it makes cleaner linear logs. //!\\ it needs to be done CLEANLY else it will completely muddy up the collaborative history.
+- **rebase** : MOVES the child branch to now start where the modified main branch ends, all commit history of main now incorporated into CHILDBRANCH as it gets rewritten. it makes cleaner linear logs. //!\\ it needs to be done CLEANLY else it will completely muddy up the collaborative history.
+___
 
 
 - git commit -m "message following convention"
 finalises the changes added to the staging
+____
 
 - git push (towhom)(whichbranch)
 feeds the commits to the source
