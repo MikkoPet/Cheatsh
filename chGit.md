@@ -60,7 +60,7 @@ deletes a branch
 
 ## TURN BACK
 
-### Git reset
+#### Git reset
 Hard "turn back" on a small scale.  
     - Discards commits  
     - Throws away uncommited edits  
@@ -70,11 +70,11 @@ Hard "turn back" on a small scale.
 - --mixed -> no reset of the working dir, but staged files are aligned to the commit being reset to
 - --hard -> everything is updated to be aligned to the commit being reset to
 
-### Git revert
+#### Git revert
 Soft "turn back" useful for public branches.  
     - creates a new commit that indicates the "turn back"
 
-### Git checkout
+#### Git checkout
 Inspection tool for commits + discards edits on file level
 
 RESET + CHECKOUT on whole commit by default, need parametres to specify smaller scales.
@@ -85,32 +85,32 @@ REVERT only applies to commits, not files, thus needs no specifying parametre.
 Displays commit history
 
 ### Detailing the reports
-**--stat** 
+#### --stat 
 will also display the amt of edits per commit, in numbers of deletions and insertions (++++++---), + amt of files changed
 
-**-p**
+#### -p
 will display the actual changes within the files.
 
 ### Filtering
  
-**--after=** **--before=**  
+#### --after= --before=  
 sets date (YYYY/MM/DD)  
 also works with relative refs ( _yesterday_, _3 days ago_)  
 can be used in conjunction to establish start and end of tracking  
 
-**--author=**   
+#### --author=
 filter by user  
 can be multiple users with \|  
 works with user-email as well  
 needn't be perfect match  
 
-**--grep=**  
+#### --grep=  
 search by commit msg  
 
-**--merges** and **--no-merges**  
+#### --merges and --no-merges 
 as per cmd argument suggests  
 
-**range**  
+#### range
 using **..** defines a range between two arguments to act as start and endpoint of tracking.  
 Useful for branch history, ex:  
 ```
@@ -157,45 +157,45 @@ tracks a branch on origin
 ## GitCLI
 
 ### SETUP
-**git auth login**  
+#### git auth login
 setup link with ghub accnt  
 
-**gh config set editor**  
+#### gh config set editor
 +editors name  
 sets up the editor for CLI  
 
-**gh alias set**  
+#### gh alias set
 sets frequent use aliases  
 
 ### REPO MANAGEMENT
 
-**gh repo create [name]**  
+#### gh repo create [name] 
 creates repo of [name]  
 - **-p**, **--template [repolnk]**, uses a repo as template
 - **-t**, **--team [name]**, grants access to org of [name]
 - **-c**, **--clone**, clones the repo locally
 
-**gh repo fork [repolnk]**  
+#### gh repo fork [repolnk]
 forks repo  
 
-**gh repo clone [repolnk][dir]**  
+#### gh repo clone [repolnk][dir]
 clones a repo  
 
-**gh repo view [repolnk]**  
+#### gh repo view [repolnk] 
 views dist repo
 - **-b** **--branch [string]** view specific branch
 - **-w**, **--web**, opens repo in browser  
 
 ### ISSUES
 
-**gh issue create**  
+#### gh issue create
 creates an issue
 - **-t**, **--title [string]**, specifies title
 - **-l**, **--label [name]**, adds a label
 - **-a**, **--assignee [login]** assigns people to the issue. 
     - @me self assigns the task
 
-**gh issue list**  
+#### gh issue list
 lists issues  
 - **-a**, filters by assignee
 - **-A**, filters by author
@@ -203,27 +203,27 @@ lists issues
     - on default, is "open"
 - **-l** filters by label
 
-**gh issues status**  
+#### gh issues status
 shows status of issues  
 
-**gh issues view (number | url)**  
+#### gh issues view (number | url)
 view specified issue
 - **-c** displays comments
 
-**gh issue close (number | url)**  
+#### gh issue close (number | url)  
 closes issue
 - **-c** adds a closing comment
 - **-r** specifies reason for closing
 
 ### PR
 
-**gh pr create**  
+#### gh pr create
 creates pull request
 - **-a**, which branch to merge into
 - **-f**, uses last commit info as PR title and body
 - **-l**, adds label  
 
-**gh pr list**  
+#### gh pr list
 lists pull request
 - **-a**, filters by assignee
 - **-A**, filters by author
@@ -231,28 +231,27 @@ lists pull request
     - on default, is "open"
 - **-l** filters by label  
 
-**gh pr status**  
+#### gh pr status
 shows status of PRs  
 
-**gh pr view (number | url | branch)**  
+#### gh pr view (number | url | branch)  
 view specific pr
 - **-c** displays comments  
 
-**gh pr checkout (number | url | branch)**  
+#### gh pr checkout (number | url | branch)  
 checkout pull request  
 
-**gh pr merge (number | url | branch)**  
+#### gh pr merge (number | url | branch) 
 merges pull request  
 
-**gh pr diff (number | url | branch)**  
+#### gh pr diff (number | url | branch) 
 display changes in pr  
 
-**gh pr close (number | url | branch)**   
+#### gh pr close (number | url | branch)  
 closes pr  
 - **c** leaves closing comment
 - **d** deletes branch upon closing
 
-**gh pr reopen (number | url | branch)**  
+#### gh pr reopen (number | url | branch)
 reopens closed pr
 - **-c** leaves closing comment  
-
