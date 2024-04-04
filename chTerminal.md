@@ -72,13 +72,13 @@ npm init --yes
 ```
 quick creates the proj with all the default answer values   
 
-**npm install** or **npm i**  
+#### npm install or npm i 
 followed by a package name will install the package  
 
 as standalone, installs all packages listed as dependencies in package.json in current dir  
 
-**--save**  
+- **--save**  
 will also enscribe the installed pack into the package.json file to be indicated as dependency  
 
-**--global**  
+- **--global**  
 will install module globally  
