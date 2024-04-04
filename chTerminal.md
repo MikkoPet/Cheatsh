@@ -35,9 +35,50 @@ cp -r (sourcepath) (destpath) to copy
 grep can find specified strings WITHIN files  
 sort grabs the content of a file and orders it  
 
-## quick dirty modify
+## Modify
+
+### quick dirty modify
 nano (file) will allow modifs of (file) content through terminal  
 echo"message">(file) puts the content of "message" as content of (file) (chill for README.md)  
 
-## serious.
+### serious.
 code . opens the current dir into VScode  
+
+
+## NODE & NPM
+
+### npm
+
+package manager  
+creates a package.jason listing dependencies  
+
+```
+npm init
+```
+
+will have to specify
+- proj name
+- init version
+- desc
+- main file
+- test command
+- git repo
+- tags
+- license  
+        will provide default sugg  
+
+```
+npm init --yes
+```
+quick creates the proj with all the default answer values   
+
+**npm install** or **npm i**  
+followed by a package name will install the package  
+
+as standalone, installs all packages listed as dependencies in package.json in current dir  
+
+**--save**  
+will also enscribe the installed pack into the package.json file to be indicated as dependency  
+
+**--global**  
+will install module globally  
