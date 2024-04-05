@@ -60,6 +60,34 @@ deletes a branch
 
 ## TURN BACK
 
+#### Git bisect
+when a bug has been introduced but its original commit is unknown, bisect allows to automate a binary process instead of linearly having to test back one by one.
+
+Linear process:  
+in a 0->1->2->3->4->5->6->7->CURRENT  chain of commits where 0 is a known non-bugged version, running bisect will checkout the middle point of the commit history (in this case, commit4). Running tests, we can then tell bisect whether commit4 is GOOD (doesn't feature the bug/searchedfor feature) or BAD (contains it), meaning respectively the OG introduction commit is later or sooner in the chain.  
+When GOOD, it'll then move to the middle point of the forward section, between 4-----CURRENT. When BAD, it'll move to the midpoint between 0--------4, respectively c6 and c2.  The process will repeat, until identifying which commit introduced the bug/searchedfor feature.  
+
+##### in practice:
+```
+git bisect start KNOWN-BAD-COMMIT KNOWN-GOOD-COMMIT
+```
+starts up the process, defining the entry and closing point on the commit history.
+
+```
+git bisect bad/good
+```
+tells bisect whether a checkout-ed commit it provided is GOOD or BAD.
+
+```
+git bisect log
+```
+provides log of the commits checked so far, indicating if they were 'run' (checked out), and/or marked as good/bad, and thus the earliest found BAD commit
+
+```
+git bisect reset HEAD
+```
+when checking out the earliest found BAD commit, will end bisect checked out on it instead of reverting to the latest commit on MAIN
+
 #### Git reset
 Hard "turn back" on a small scale.  
     - Discards commits  
