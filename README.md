@@ -3,8 +3,10 @@
 
     Everything here can be forgotten, for I have it jotted down.
 
+## Contents
+
 #### [Git and all its tools](/chGit.md)
-Commands to use Git  
+Mega-sheet of commands to use Git  
 Includes Sections on GitFlow and GhCLI
 #### [Markdown](/chMarkdown.md)
 Basic formatting under MD
