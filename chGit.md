@@ -63,9 +63,11 @@ deletes a branch
 #### Git bisect
 when a bug has been introduced but its original commit is unknown, bisect allows to automate a binary process instead of linearly having to test back one by one.
 
-Linear process:  
-in a 0->1->2->3->4->5->6->7->CURRENT  chain of commits where 0 is a known non-bugged version, running bisect will checkout the middle point of the commit history (in this case, commit4). Running tests, we can then tell bisect whether commit4 is GOOD (doesn't feature the bug/searchedfor feature) or BAD (contains it), meaning respectively the OG introduction commit is later or sooner in the chain.  
-When GOOD, it'll then move to the middle point of the forward section, between 4-----CURRENT. When BAD, it'll move to the midpoint between 0--------4, respectively c6 and c2.  The process will repeat, until identifying which commit introduced the bug/searchedfor feature.  
+Binary process:  
+in a  
+**0->1->2->3->4->5->6->7->CURRENT**  
+chain of commits where 0 is a known non-bugged version, running bisect will checkout the middle point of the commit history (in this case, commit4). Running tests, we can then tell bisect whether commit4 is _GOOD_ (doesn't feature the bug/searchedfor feature) or _BAD_ (contains it), meaning respectively the OG introduction commit is later or sooner in the chain.  
+When _GOOD_, it'll then move to the middle point of the forward section, between **4-----CURRENT**. When BAD, it'll move to the midpoint between **0--------4**, respectively c6 and c2.  The process will repeat, until identifying which commit introduced the bug/searchedfor feature.  
 
 ##### in practice:
 ```
