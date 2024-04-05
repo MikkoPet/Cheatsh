@@ -130,6 +130,17 @@ git log -S"hello world"
 ```
 will display commit history of any inclusion/deletion of the string.
 
+## Git Cherry Pick
+Picks specific commits, from a branch or else,  
+needs clean HEAD  
+good for -> applying hot fixes to MAIN without applying other feature edits ; recuperating specific edits from a branch without the Mess  
+
+#### --edit
+allows to edit the commit message
+
+#### --no-commit
+on default, cherry pick creates a new commit when porting the branch's commits. no-commit allow to just import the edits without committing them
+
 
 ## GITFLOW
 
