@@ -130,7 +130,7 @@ git log -S"hello world"
 ```
 will display commit history of any inclusion/deletion of the string.
 
-## Git Cherry Pick
+## Git cherry-pick
 Picks specific commits, from a branch or else,  
 needs clean HEAD  
 good for -> applying hot fixes to MAIN without applying other feature edits ; recuperating specific edits from a branch without the Mess  
