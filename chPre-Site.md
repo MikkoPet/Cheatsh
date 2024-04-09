@@ -105,11 +105,15 @@ Things to keep in mind for the user's ease:
 
 #### Clarity and Space
 
-Clogging the space will make the website unreadable, and muddle out the information. Keep things minimal and spaced out.
+Clogging the space will make the website unreadable, and muddle out the information. Keep things minimal and spaced out. 
+
+#### Consistency
+
+Keeping the different pages cohesive helps with clarity too, as the user doesn't have to relearn where to find things each time.
 
 #### Prioritisation
 
-Use organised sizing to highlight more important pieces of information and keep things in a hierarchy.
+Use organised sizing to highlight more important pieces of information and keep things in a hierarchy. Pointless contents should be removed, as the users will get overwhelmed if there is too much to see at once.
 
 #### Contrast
 
@@ -117,12 +121,19 @@ Between elements, between colours
 
 #### Navigation
 
-Menues should be easely accessible, so the user can move between pages without having to look for it. The user should also be able to tell where in the website they are (titles, breadcrumb trail...)
+Menues should be easely accessible, so the user can move between pages without having to look for it. The user should also be able to tell where in the website they are (titles, breadcrumb trail...+404 to let them know they got lost!!)
 
 #### Time
 
-Keep your website light, optimise it to not take too long and tire out your user.
+Keep your website light, optimise it to not take too long and tire out your user. It should also be quick to navigate (some refer to the '3 clicks rule', from the home page, anything should be findable in 3 clicks)
 
 #### Dynamism
 
-A website with relevant animations will please the user, but don't overdo it else they'll get lost in the visual noise
+A website with relevant animations will please the user, but don't overdo it else they'll get lost in the visual noise. That also includes FEEDBACKS which will help the user be aware of where they are, what they did, what worked etc... and reduce their confusions or doubts
+
+### the goal is to
+
+1. limit the time during which the user is LOOKING for things instead of browsing (=passive time)
+2. be as intuitive as possible
+3. make the content appear attractive
+4. 
